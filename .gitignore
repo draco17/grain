@@ -6,6 +6,7 @@ test/reports
 web-app/WEB-INF
 web-app/plugins
 web-app/index.gsp
+web-app/js/prototype
 .classpath
 .project
 .settings
