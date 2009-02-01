@@ -13,3 +13,4 @@ web-app/js/prototype
 *.iws
 *.war
 *DB*
+cobertura.ser
