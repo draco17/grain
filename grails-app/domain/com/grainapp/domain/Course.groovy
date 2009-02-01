@@ -18,6 +18,8 @@ package com.grainapp.domain
 class Course {
 	String name
 	String description
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
 		name(blank:false,nullable:false,size:1..50)

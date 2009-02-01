@@ -16,5 +16,6 @@
 package com.grainapp.domain
 
 class User {
-
+	Date dateCreated
+	Date lastUpdated
 }
