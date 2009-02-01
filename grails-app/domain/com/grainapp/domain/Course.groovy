@@ -1,3 +1,5 @@
+package com.grainapp.domain
+
 class Course {
 	String name
 	String description
