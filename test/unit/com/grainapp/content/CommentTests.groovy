@@ -1,6 +1,6 @@
-import grails.test.*
-
 package com.grainapp.content
+
+import grails.test.*
 
 class CommentTests extends grails.test.GrailsUnitTestCase {
 

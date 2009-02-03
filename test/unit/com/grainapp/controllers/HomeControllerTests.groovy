@@ -1,6 +1,6 @@
-import grails.test.*
-
 package com.grainapp.controllers
+
+import grails.test.*
 
 class HomeControllerTests extends grails.test.GrailsUnitTestCase {
 
