@@ -2,7 +2,7 @@
 <%@ page import="com.grainapp.domain.Course" %>
 <html>
     <head>
-        <meta name="layout" content="synergyj" />
+        <meta name="layout" content="main" />
         <title>Create Course</title>         
     </head>
     <body>

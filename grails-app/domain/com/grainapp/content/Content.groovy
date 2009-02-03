@@ -13,9 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.grainapp.domain
+package com.grainapp.content
 
-class User {
+import com.grainapp.auth.User
+
+class Content implements Serializable {
+	String title
+	String body
+	User author
 	Date dateCreated
 	Date lastUpdated
+	
+	static mapping = {
+		body type:"text"
+	}
+
+	static constraints = {
+		title(blank:false,nullable:false,size:1..200)
+		body(blank:false,nullable:false,size:1..20000)
+	}
 }
