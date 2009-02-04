@@ -4,20 +4,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
-        <title>Create NewsItem</title>         
+        <title>Create NewsItem</title>      
     </head>
     <body>
         <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
+            <span class="menuButton"><a class="home" href="${createLinkTo(controller:'home')}">Home</a></span>
             <span class="menuButton"><g:link class="list" action="list">NewsItem List</g:link></span>
         </div>
+
+		
+
+
         <div class="body">
             <h1>Create NewsItem</h1>
             <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
+            <div id="message">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${newsItemInstance}">
-            <div class="errors">
+            <div id="errors">
                 <g:renderErrors bean="${newsItemInstance}" as="list" />
             </div>
             </g:hasErrors>
@@ -59,16 +63,35 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:newsItemInstance,field:'publishedDate','errors')}">
                                     <g:datePicker name="publishedDate" value="${newsItemInstance?.publishedDate}" ></g:datePicker>
+
+
                                 </td>
                             </tr> 
                         
                         </tbody>
                     </table>
                 </div>
+<input id="datepicker" type="text" name="publishedDate" value="${newsItemInstance?.publishedDate}">
+
                 <div class="buttons">
                     <span class="button"><input class="save" type="submit" value="Create" /></span>
                 </div>
             </g:form>
+
+
+
+			<div id="right">
+				<h2 class="mem">Member Login</h2>
+				<form name="memberLogin" action="#" method="post">
+				<input type="text" name="name" class="txtBox" value="-your name-" />
+				<input type="password" name="name" class="txtBox" value="-password-" />
+				<a href="#">Register here</a>
+				<input type="submit" name="login" value="" class="login" />
+				<br class="spacer" />
+				</form>
+				<p class="bottom2"></p>
+				<br class="spacer" />
+				</div>
         </div>
     </body>
 </html>

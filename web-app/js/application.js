@@ -11,3 +11,19 @@ if (Ajax && (Ajax != null)) {
 	  }
 	});
 }
+
+
+$(function () {
+  $("#errors").slideDown(2000);
+});
+
+
+$(document).ready(function() {
+    var max = 0;
+    $("label").each(function(){
+        if ($(this).width() > max)
+            max = $(this).width();   
+    });
+    $("label").width(max);
+});
+

@@ -1,3 +1,5 @@
+
+
 /* CSS Document */
 
 body{
@@ -6,9 +8,179 @@ body{
 	background-color:#FFFAEA;
 	color:#000;
 }
-div, h1, h2, p, form, label, input, textarea, img, span{
+div, h1, h2, p, input, textarea, img, span{
 	margin:0; padding:0;
 }
+
+
+
+label, input[type="text"]{
+    float:left;
+    display:block;
+}
+label
+{
+    margin-right: 5px;
+}
+.field{
+    width:100%;
+    overflow:auto;
+    margin:5px 0px;
+}
+
+
+form {
+	background:url(images/formBgr.gif) 0 0 repeat-x;
+	background-color:black;
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius: 10px;
+	-khtml-border-radius: 10px;
+	
+
+	margin-top: 20px;
+	  padding: 0;
+	  font-size: 100%;
+	
+}
+
+form fieldset {
+  clear: both;
+  font-size: 100%;
+  border-color: #000000;
+  border-width: 0px 0 0 0;
+  border-style: solid none none none;
+  padding: 10px;
+  margin: 0 0 0 0;
+
+}
+
+form fieldset legend {
+  font-size: 150%;
+  font-weight: normal;
+color:#7BCA0A;
+  margin: 0 0 0 0;
+  padding: 0 5px;
+}
+
+form div {
+  clear: left;
+  display: block;
+  width: 354px;
+  zoom: 1;
+  margin: 5px 0 0 0;
+  padding: 1px 3px;
+}
+
+form fieldset div.notes {
+  float: right;
+  width: 158px;
+  height: auto;
+  margin: 0 0 10px 10px;
+  padding: 5px;
+  border: 1px solid #666666;
+  background-color: #ffffe1;
+  color: #666666;
+  font-size: 88%;
+
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius: 10px;
+	-khtml-border-radius: 10px;
+}
+
+form fieldset div.notes h4 {
+  background-image: url(/images/icon_info.gif);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 3px 0 3px 27px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #666666;
+  color: #666666;
+  font-size: 110%;
+}
+
+form fieldset div.notes p {
+  margin: 0em 0em 1.2em 0em;
+  color: #666666;
+}
+
+form fieldset div.notes p.last {
+  margin: 0em;
+}
+
+form div fieldset {
+  clear: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666666;
+  margin: 0 0 0 144px;
+  padding: 0 5px 5px 5px;
+  width: 197px;
+}
+
+form div fieldset legend {
+  font-size: 100%;
+  padding: 0 3px 0 9px;
+}
+
+form div.required fieldset legend {
+  font-weight: bold;
+}
+
+form div label {
+  display: block;
+  float: left;
+  width: 130px;
+  padding: 3px 5px;
+  margin: 0 0 5px 0;
+  text-align: right;
+color: white;
+}
+
+form div.optional label, label.optional {
+  font-weight: normal;
+}
+
+form div.required label, label.required {
+  font-weight: bold;
+}
+
+form div label.labelCheckbox, form div label.labelRadio {
+  float: none;
+  display: block;
+  width: 200px;
+  zoom: 1;
+  padding: 0;
+  margin: 0 0 5px 142px;
+  text-align: left;
+}
+
+form div fieldset label.labelCheckbox, form div fieldset label.labelRadio {
+  margin: 0 0 5px 0;
+  width: 170px;
+}
+
+form div img {
+  border: 1px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ul{
 	margin:0; 
@@ -358,6 +530,12 @@ p.viewMore a:hover{
 	padding:4px 13px 0 11px;
 	margin:0 17px 0 0;
 	float:left;
+	
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius: 10px;
+	-khtml-border-radius: 10px;
 }
 #mid h2{
 	font:bold 22px/38px Arial, Helvetica, sans-serif;
@@ -700,7 +878,7 @@ p.viewMore a:hover{
 
 /* MESSAGES AND ERRORS */
 
-.message {
+#message {
     background: #f3f8fc url(../../images/skin/information.png) 8px 50% no-repeat;
     border: 1px solid #b2d1ff;
     color: #006dba;
@@ -708,22 +886,58 @@ p.viewMore a:hover{
     padding: 5px 5px 5px 30px
 }
 
-div.errors {
-    background: #fff3f3;
-    border: 1px solid red;
-    color: #cc0000;
-    margin: 10px 0 5px 0;
+
+#errors {
+    margin: 10px 0 10px 0;
     padding: 5px 0 5px 0;
+	display: none;	
+	
+	border: 1px solid #cd0a0a; background: #b81900 url(images/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat; color: #ffffff;
+
+	-moz-border-radius:6px; 
+	-webkit-border-radius:6px;
+	-ms-border-radius:6px;
+	border-radius: 6px;
+	-khtml-border-radius: 6px;
 }
-div.errors ul {
-    list-style: none;
-    padding: 0;	
+
+#errors ul{
+	list-style: none;
+    padding: 0;
 }
-div.errors li {
-	background: url(../../images/skin/exclamation.png) 8px 0% no-repeat;
-    line-height: 16px;
-    padding-left: 30px;
+
+#errors ul li{
+	background: url(../../images/skin/exclamation.png) 11px 0% no-repeat;
+	background-position: .5em .3em;
+	padding-left: 30px;
+	font:bold 14px/23px Arial, Helvetica, sans-serif;
+	display: block;
+	height: auto;
 }
+
+#errors ul li a{
+	background:url(images/arrow.gif) 0 7px no-repeat;
+	padding:0 0 0 14px;
+	font:bold 11px/20px Arial, Helvetica, sans-serif;
+	color:#000;
+	background-color:#fff;
+	text-decoration:none;
+	margin:0;
+	display:block;
+}
+#errors ul li a:hover{
+	color:#A60303;
+	background-color:#ECECEC;
+}
+#errors ul li:hover{
+	color:yellow;
+}
+#errors ul li.noImg{
+	display:block;
+	background-image:none;
+	height:20px;
+}
+
 
 td.errors select {
     border: 1px solid red;
