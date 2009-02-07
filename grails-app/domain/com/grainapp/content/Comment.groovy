@@ -15,14 +15,12 @@
  */
 package com.grainapp.content
 
-class Comment {
+class Comment extends Conten {
 	String poster
-	String body
 	String email
 	
 	static constraints = {
 		poster(blank:false)
 		email(email:true, nullable:true)
-		body(blank:false)
 	}
 }
