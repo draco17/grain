@@ -2,6 +2,7 @@
 <%@ page import="com.grainapp.domain.Course" %>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
         <title>Edit Course</title>
     </head>
@@ -12,7 +13,7 @@
             <span class="menuButton"><g:link class="create" action="create">New Course</g:link></span>
         </div>
         <div class="body">
-            <h2>Edit Course</h2>
+            <h1>Edit Course</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -45,7 +46,34 @@
                                     <textarea rows="5" cols="40" name="description">${fieldValue(bean:courseInstance, field:'description')}</textarea>
                                 </td>
                             </tr> 
-                                                
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="dateCreated">Date Created:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'dateCreated','errors')}">
+                                    <g:datePicker name="dateCreated" value="${courseInstance?.dateCreated}" ></g:datePicker>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="lastUpdated">Last Updated:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'lastUpdated','errors')}">
+                                    <g:datePicker name="lastUpdated" value="${courseInstance?.lastUpdated}" ></g:datePicker>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="type">Type:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'type','errors')}">
+                                    <g:select  from="${com.grainapp.domain.CourseType?.values()}" value="${courseInstance?.type}" name="type" ></g:select>
+                                </td>
+                            </tr> 
+                        
                         </tbody>
                     </table>
                 </div>

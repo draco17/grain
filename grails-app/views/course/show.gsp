@@ -2,6 +2,7 @@
 <%@ page import="com.grainapp.domain.Course" %>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="layout" content="main" />
         <title>Show Course</title>
     </head>
@@ -12,7 +13,7 @@
             <span class="menuButton"><g:link class="create" action="create">New Course</g:link></span>
         </div>
         <div class="body">
-            <h2>Show Course</h2>
+            <h1>Show Course</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -53,6 +54,13 @@
                             <td valign="top" class="name">Last Updated:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:courseInstance, field:'lastUpdated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Type:</td>
+                            
+                            <td valign="top" class="value">${courseInstance?.type?.encodeAsHTML()}</td>
                             
                         </tr>
                     

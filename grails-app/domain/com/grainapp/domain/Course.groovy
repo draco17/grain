@@ -20,6 +20,7 @@ class Course {
 	String description
 	Date dateCreated
 	Date lastUpdated
+	CourseType type
 	
 	static constraints = {
 		name(blank:false,nullable:false,size:1..50)
