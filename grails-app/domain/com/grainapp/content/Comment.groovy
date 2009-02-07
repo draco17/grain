@@ -15,7 +15,7 @@
  */
 package com.grainapp.content
 
-class Comment extends Conten {
+class Comment extends Content {
 	String poster
 	String email
 	
