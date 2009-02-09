@@ -15,6 +15,8 @@
  */
 package com.grainapp.domain
 
+import com.grainapp.auth.User
+
 class CourseSession{
 	Date sessionDate
 	Module module

@@ -15,6 +15,8 @@
  */
 package com.grainapp.domain
 
+import com.grainapp.auth.User
+
 class ScheduledCourse{
 	Course course
 	SortedSet courseSessions
@@ -23,5 +25,5 @@ class ScheduledCourse{
 	Integer costByCourse
 	Integer costByModule
 	
-	statics hasMany = [teachers:User,courseSessions:CourseSession]
+	static hasMany = [teachers:User,courseSessions:CourseSession]
 }

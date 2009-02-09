@@ -15,6 +15,8 @@
  */
 package com.grainapp.domain
 
+import com.grainapp.auth.User
+
 class Module implements Comparable{
 	String moduleName
 	SortedSet moduleTopics
