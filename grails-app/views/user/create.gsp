@@ -65,7 +65,7 @@
 				
 				<div class="required">
 					<label for="blog">Blog:</label>
-					<textarea rows="5" cols="40" name="blog">${fieldValue(bean:userInstance, field:'blog')}</textarea>
+					<input type="text" maxlength="200" id="blog" name="blog" value="${fieldValue(bean:userInstance,field:'blog')}"/>
 				</div>
 				
 				<div class="required">
