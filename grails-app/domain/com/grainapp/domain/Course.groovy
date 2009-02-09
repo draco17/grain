@@ -21,6 +21,9 @@ class Course {
 	Date dateCreated
 	Date lastUpdated
 	CourseType type
+	SortedSet modules
+	
+	static hasMany = [modules:Module]
 	
 	static constraints = {
 		name(blank:false,nullable:false,size:1..50)
