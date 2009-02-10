@@ -23,4 +23,8 @@ class CourseSession{
 	
 	static hasMany = [teachers:User]
 	static belongsTo = [scheduledCourse:ScheduledCourse]
+	
+	String toString(){
+		sessionDate.toString()
+	}
 }
