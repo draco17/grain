@@ -17,5 +17,5 @@ package com.grainapp.auth
 
 class UserController {
     
-    def scaffold = true
+    def scaffold = User
 }
