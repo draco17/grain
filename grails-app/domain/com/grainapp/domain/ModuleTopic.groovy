@@ -20,12 +20,17 @@ class ModuleTopic implements Comparable{
 	SortedSet subModuleTopics
 	
 	static hasMany = [subModuleTopics:ModuleTopic]
+	static belongsTo = [module:Module,moduleTopic:ModuleTopic]
 	
 	static constraints = {
 		subModuleTopics nullable:true
 	}
 	
 	int compareTo(Object obj){
-		
+		topicName.compareTo(obj.topicName)
+	}
+	
+	String toString(){
+		topicName
 	}
 }
