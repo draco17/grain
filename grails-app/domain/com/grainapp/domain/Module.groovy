@@ -21,9 +21,14 @@ class Module implements Comparable{
 	String moduleName
 	SortedSet moduleTopics
 	
-	static hasMany = [moduleTopics:ModuleTopic,teachers:User]
+	static hasMany = [moduleTopics:ModuleTopic]
+	static belongsTo = [course:Course]
 	
 	int compareTo(Object obj){
-		
+		moduleName.compareTo(obj.moduleName)
+	}
+	
+	String toString(){
+		moduleName
 	}
 }
