@@ -28,25 +28,20 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			//url = "jdbc:hsqldb:file:devDB"
+			url = "jdbc:hsqldb:file:devDB"
 			dbCreate = "update" // one of 'create', 'create-drop','update'
-			url = "jdbc:mysql://localhost:3306/grain_dev"
-			driverClassName = "com.mysql.jdbc.Driver"
-			dialect = org.hibernate.dialect.MySQLInnoDBDialect
-			username = "root"
-			password = ""
 		}
 	}
 	test {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:mem:testDb"
+			url = "jdbc:hsqldb:mem:testDB"
 		}
 	}
 	production {
 		dataSource {
 			dbCreate = "update"
-			url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+			url = "jdbc:hsqldb:file:prodDB;shutdown=true"
 		}
 	}
 }
