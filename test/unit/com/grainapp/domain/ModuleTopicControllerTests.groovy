@@ -1,6 +1,6 @@
-import grails.test.*
-
 package com.grainapp.domain
+
+import grails.test.*
 
 class ModuleTopicControllerTests extends grails.test.GrailsUnitTestCase {
 

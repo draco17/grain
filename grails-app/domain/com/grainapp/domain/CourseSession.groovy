@@ -20,6 +20,8 @@ import com.grainapp.auth.User
 class CourseSession{
 	Date sessionDate
 	Module module
+	Date dateCreated
+	Date lastUpdated
 	
 	static hasMany = [teachers:User]
 	static belongsTo = [scheduledCourse:ScheduledCourse]
