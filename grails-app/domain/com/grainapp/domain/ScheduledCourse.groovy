@@ -21,9 +21,11 @@ class ScheduledCourse{
 	Course course
 	SortedSet courseSessions
 	Date beginDate
-	List teachers
-	Integer costByCourse
-	Integer costByModule
+	BigDecimal costByCourse
+	BigDecimal costByModule
 	
-	static hasMany = [teachers:User,courseSessions:CourseSession]
+	Date dateCreated
+	Date lastUpdated
+	
+	static hasMany = [courseSessions:CourseSession]
 }

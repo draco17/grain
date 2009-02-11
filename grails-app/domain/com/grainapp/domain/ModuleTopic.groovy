@@ -15,9 +15,11 @@
  */
 package com.grainapp.domain
 
-class ModuleTopic implements Comparable{
+class ModuleTopic implements Comparable {
 	String topicName
 	SortedSet subModuleTopics
+	Date dateCreated
+	Date lastUpdated
 	
 	static hasMany = [subModuleTopics:ModuleTopic]
 	
@@ -26,6 +28,6 @@ class ModuleTopic implements Comparable{
 	}
 	
 	int compareTo(Object obj){
-		
+		0
 	}
 }

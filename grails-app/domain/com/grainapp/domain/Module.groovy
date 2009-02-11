@@ -17,13 +17,15 @@ package com.grainapp.domain
 
 import com.grainapp.auth.User
 
-class Module implements Comparable{
+class Module implements Comparable {
 	String moduleName
 	SortedSet moduleTopics
+	Date dateCreated
+	Date lastUpdated
 	
-	static hasMany = [moduleTopics:ModuleTopic,teachers:User]
+	static hasMany = [moduleTopics:ModuleTopic]
 	
 	int compareTo(Object obj){
-		
+		0
 	}
 }
