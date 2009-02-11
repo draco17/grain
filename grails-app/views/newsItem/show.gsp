@@ -7,7 +7,6 @@
         <title>Show NewsItem</title>
     </head>
     <body>
-		
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link class="list" action="list">NewsItem List</g:link></span>
@@ -63,7 +62,21 @@
                             </td>
                             
                         </tr>
-                                        
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Date Created:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:newsItemInstance, field:'dateCreated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Last Updated:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:newsItemInstance, field:'lastUpdated')}</td>
+                            
+                        </tr>
+                    
                         <tr class="prop">
                             <td valign="top" class="name">Published Date:</td>
                             

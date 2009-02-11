@@ -1,5 +1,4 @@
 
-
 /* CSS Document */
 
 body{
@@ -536,7 +535,15 @@ p.viewMore a:hover{
 	-ms-border-radius:10px;
 	border-radius: 10px;
 	-khtml-border-radius: 10px;
+	
+	color: #AFB0B1;
+
+	font: 1em "Lucida Grande",Lucida,Verdana,sans-serif; font-size: 62.5%; line-height: 1;
+	
+	
+	
 }
+/*
 #mid h2{
 	font:bold 22px/38px Arial, Helvetica, sans-serif;
 }
@@ -565,7 +572,100 @@ p.viewMore a:hover{
 	color:#fff;
 	background-color:#FF6600;
 	margin:0 0 46px 0;
-}		
+}		*/
+
+#mid ul {
+    font-size:1.2em;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position:relative;
+}
+
+.rating {
+    background-image:url(images/simple-spy/info_bar_stars.png);
+    background-repeat:no-repeat;
+    height:12px;
+    text-indent:-900em;
+    font-size:1em;
+    margin:0 0 9px;
+}
+
+.none {
+	background-position: 82px 0px;
+}
+
+.four {
+	background-position: 82px -48px;
+}
+
+.five {
+	background-position: 82px -60px;
+}
+
+.tags {
+	color: #fff;
+	margin: 0.5em;
+}
+
+.tags a,
+.tags span {
+	background-color: #333839;
+	font-size: 0.8em;
+	padding: 0.1em 0.8em 0.2em;
+}
+
+.tags a:link,
+.tags a:visited {
+	color: #fff;
+	text-decoration: none;	
+}
+
+.tags a:hover,
+.tags a:active {
+	background-color: #3e4448;
+	color: #fff;
+	text-decoration: none;	
+}
+
+#mid li {
+    height: 90px;
+    overflow: hidden;
+}
+
+#mid li h5 {
+    color:#A5A9AB;
+    font-size:1em;
+    margin-bottom:0.5em;
+}
+
+#mid li h5 a {
+    color:#A5A9AB;
+    text-decoration:none;
+}
+
+#mid li img {
+    float:left;
+    margin-right:8px;
+}
+
+#mid li .info {
+    color:#3E4548;
+    font-size:1em;
+}
+
+#mid .info a,
+#mid .info a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+#mid .spyWrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;    
+}
+
 /*------------------------------------------------mid panel--------------------*/
 
 /*------------------------------------------------right panel--------------------*/
@@ -1027,4 +1127,17 @@ th.desc a {
 }
 .paginateButtons span {
     padding: 2px 3px;
+}
+
+
+
+
+.tags span,
+.tags a {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+a img {
+    border: 0;
 }

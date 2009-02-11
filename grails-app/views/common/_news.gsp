@@ -1,8 +1,36 @@
+
+
+
+
 <div id="mid">
-	<h2>Noticias...</h2>
+
+        
+
+    <ul class="spy">
+	        	<li>
+	        		<a href="http://www.google.com" title="View round"><img width="70" height="70" src="http://jqueryfordesigners.com/demo/images/simple-spy/1.png" title="" /></a>
+	        		<h5><a href="#" title="View round">round</a></h5>
+	        		<p class="info">Nov 29th 2008 by <a href="#" title="Visit neue's userpage.">neue</a></p>
+	        		<p class='rating none'>Not Rated</p>
+
+	        		<p class="tags"></p>
+	        	</li>
 	
-	<h3>Sin noticias</h3>
-	<img src="${createLinkTo(dir:'themes/synergyj/images',file:'mid_panel_pic.gif')}" alt="pic" width="252" height="109" />
-	<p class="midText">El equipo de SynergyJ esta trabajando para tener noticias disponibles....</p>
-	<br class="spacer" />
+				<li>
+	        		<a href="http://www.google.com" title="View otro"><img width="70" height="70" src="http://jqueryfordesigners.com/demo/images/simple-spy/1.png" title="" /></a>
+	        		<h5><a href="#" title="View otro">round</a></h5>
+	        		<p class="info">Nov 29th 2008 by <a href="#" title="Visit neue's userpage.">neue</a></p>
+	        		<p class='rating none'>Not Rated</p>
+
+	        		<p class="tags"></p>
+	        	</li>
+
+	        	
+	        </ul>
+	
+	
+
 </div>
+
+
+

@@ -52,7 +52,7 @@
                                     <label for="author">Author:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:newsItemInstance,field:'author','errors')}">
-                                    <g:select optionKey="id" from="${com.grainapp.auth.User.list()}" name="author.id" value="${newsItemInstance?.author?.id}" ></g:select>
+                                    <g:select optionKey="id" from="${com.grainapp.auth.User.list()}" name="author.id" value="${newsItemInstance?.author?.id}" noSelection="['null':'']"></g:select>
                                 </td>
                             </tr> 
                         
@@ -68,7 +68,25 @@ value="${newsItemInstance?.comments}" />
 
                                 </td>
                             </tr> 
-                                                
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="dateCreated">Date Created:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:newsItemInstance,field:'dateCreated','errors')}">
+                                    <g:datePicker name="dateCreated" value="${newsItemInstance?.dateCreated}" ></g:datePicker>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="lastUpdated">Last Updated:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:newsItemInstance,field:'lastUpdated','errors')}">
+                                    <g:datePicker name="lastUpdated" value="${newsItemInstance?.lastUpdated}" ></g:datePicker>
+                                </td>
+                            </tr> 
+                        
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="publishedDate">Published Date:</label>
