@@ -26,8 +26,9 @@ class Content implements Serializable {
 	
 	static mapping = {
 		body type:"text"
+		tablePerHierarchy false
 	}
-
+	
 	static constraints = {
 		title(blank:false,nullable:false,size:1..200)
 		body(blank:false,nullable:false,size:1..20000)
