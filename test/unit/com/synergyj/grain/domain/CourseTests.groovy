@@ -15,19 +15,65 @@
  */
 package com.synergyj.grain.domain
 
-import grails.test.*
-import com.synergyj.grain.domain.*
-
 class CourseTests extends grails.test.GrailsUnitTestCase {
-	void testBlankName() {
-		mockDomain(Course)
-		def course = new Course(name:"")
-		assertFalse 'the name can not be blank', course.validate()
+	def existingCourse = new Course(name:buildString(50), description:buildString(10000), type:CourseType.COURSE)
+	
+	void testConstraintsName() {
+		mockForConstraintsTests(Course, [ existingCourse ])
+		
+		def course = new Course(name:null)
+		assertFalse course.validate()
+		assertEquals "nullable", course.errors["name"]
+		
+		course = new Course(name:"")
+		assertFalse course.validate()
+		assertEquals "blank", course.errors["name"]
+		
+		course = new Course(name:buildString(51))
+		assertFalse course.validate()
+		assertEquals "size", course.errors["name"]
 	}
 	
-	void testNullName() {
-		mockDomain(Course)
-		def course = new Course()
-		assertFalse 'the name can not be null', course.validate()
+	void testConstraintsDescription() {
+		mockForConstraintsTests(Course, [ existingCourse ])
+		
+		def course = new Course(description:null)
+		assertFalse course.validate()
+		assertEquals "nullable", course.errors["description"]
+		
+		course = new Course(description:"")
+		assertFalse course.validate()
+		assertEquals "blank", course.errors["description"]
+		
+		course = new Course(description:buildString(10001))
+		assertFalse course.validate()
+		assertEquals "size", course.errors["description"]
 	}
+	
+	void testConstraintsType() {
+		mockForConstraintsTests(Course, [ existingCourse ])
+		
+		def course = new Course(type:null)
+		assertFalse course.validate()
+		assertEquals "nullable", course.errors["type"]
+	}
+	
+	void testConstraints() {
+		mockForConstraintsTests(Course, [ existingCourse ])
+		
+		assertTrue existingCourse.validate()
+		assertEquals existingCourse.toString(), buildString(50)
+	}
+	
+	static def buildString(length) {
+		def str = ""
+		
+		while (length > 0) {
+			str += "A"
+			length--
+		}
+		
+		str
+	}
+	
 }

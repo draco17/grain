@@ -13,10 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.grainapp.controllers
+package com.synergyj.grain.content
 
-class HomeController {
-	def index = {
-		
-	}
+class NewsItemController {
+    
+    def scaffold = true
 }
