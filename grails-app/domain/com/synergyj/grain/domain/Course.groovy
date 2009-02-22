@@ -28,9 +28,14 @@ class Course {
 	static constraints = {
 		name(blank:false,nullable:false,size:1..50)
 		description(blank:false,nullable:false,size:1..10000)
+		type(nullable:false)
 	}
 	
 	String toString(){
 		name
+	}
+	
+	static mapping = {
+		description type:"text"
 	}
 }
