@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.grainapp.content
+package com.synergyj.grain.domain
 
-class NewsItemController {
-    
-    def scaffold = true
+class CourseSessionController {
+
+    def scaffold = CourseSession
 }

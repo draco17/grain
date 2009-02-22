@@ -16,7 +16,6 @@
 package com.synergyj.grain.domain
 
 import grails.test.*
-import com.synergyj.grain.domain.*
 
 class CourseTests extends grails.test.GrailsUnitTestCase {
 	void testBlankName() {

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.synergyj.grain.domain
+package com.synergyj.grain.controllers
 
 import grails.test.*
 
-class CourseSessionControllerTests extends grails.test.GrailsUnitTestCase {
+class ModuleControllerTests extends grails.test.GrailsUnitTestCase {
 
     void testSomething() {
 

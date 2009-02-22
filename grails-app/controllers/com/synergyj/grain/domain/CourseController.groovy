@@ -15,11 +15,7 @@
  */
 package com.synergyj.grain.domain
 
-import grails.test.*
+class CourseController {
 
-class RegistrationControllerTests extends grails.test.GrailsUnitTestCase {
-
-    void testSomething() {
-
-    }
+    def scaffold = Course
 }

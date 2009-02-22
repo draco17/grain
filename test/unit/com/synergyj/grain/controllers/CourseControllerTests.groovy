@@ -13,9 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.grainapp.domain
+package com.synergyj.grain.controllers
 
-class CourseSessionController {
+import grails.test.*
 
-    def scaffold = CourseSession
+class CourseControllerTests extends grails.test.GrailsUnitTestCase {
+
+    void testSomething() {
+
+    }
 }
