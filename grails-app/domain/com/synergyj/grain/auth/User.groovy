@@ -31,10 +31,10 @@ class User {
 	static hasMany = [roles:Role]
 
 	static constraints = {
-		email(email:true, unique:true, blank:false)
-		login(blank:false, size:5..25)
-		password(blank:false, nullable:false)
-		realName(blank: true,size:0..200)
+		email(nullable:false,blank:false,unique:true,email:true,size:1..200)
+		login(nullable:false,blank:false,unique:true,size:3..25)
+		password(nullable:false,blank:false,size:5..25)
+		realName(nullable:false,blank:false,size:0..200)
 		company(nullable:true,blank:true,size:0..100)
 		//geolocation(nullable:true,blank:true,size:0..200,geolocation:true)
 		geolocation(nullable:true,blank:true,size:0..200)
