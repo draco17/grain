@@ -13,3 +13,4 @@ web-app/js/prototype
 *.war
 *DB*
 cobertura.ser
+ddl.sql
