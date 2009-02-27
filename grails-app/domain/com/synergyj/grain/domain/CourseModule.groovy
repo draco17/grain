@@ -18,8 +18,8 @@ package com.synergyj.grain.domain
 import com.synergyj.grain.auth.User
  
 class CourseModule extends CourseContent implements Comparable {
-	SortedSet moduleTopics
-	static hasMany = [moduleTopics:ModuleTopic]
+	SortedSet topics
+	static hasMany = [topics:ModuleTopic]
 	static belongsTo = [course:Course]
 	
 	int compareTo(Object obj){
