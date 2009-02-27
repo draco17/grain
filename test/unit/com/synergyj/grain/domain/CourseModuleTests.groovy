@@ -15,12 +15,12 @@
  */
 package com.synergyj.grain.domain
 
-class ModuleTests extends grails.test.GrailsUnitTestCase {
+class CourseModuleTests extends grails.test.GrailsUnitTestCase {
 	def existingCourse = new Course(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), type:CourseType.COURSE)
-	def existingModule = new Module(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse)	
+	def existingModule = new CourseModule(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse)	
 	
 	void testConstraints() {
-		mockForConstraintsTests Module, [ existingModule ]
+		mockForConstraintsTests CourseModule, [ existingModule ]
 		mockForConstraintsTests Course, [ existingCourse ]
 		
 		assertTrue existingModule.validate()

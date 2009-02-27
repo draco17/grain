@@ -19,7 +19,7 @@ import com.synergyj.grain.auth.User
 
 class CourseSession{
 	Date sessionDate
-	Module module
+	CourseModule module
 	Date dateCreated
 	Date lastUpdated
 	

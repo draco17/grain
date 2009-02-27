@@ -17,5 +17,5 @@ package com.synergyj.grain.domain
 
 class ModuleController {
 
-    def scaffold = Module
+    def scaffold = CourseModule
 }

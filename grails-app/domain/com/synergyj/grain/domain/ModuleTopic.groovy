@@ -22,7 +22,7 @@ class ModuleTopic implements Comparable {
 	Date lastUpdated
 	
 	static hasMany = [subModuleTopics:ModuleTopic]
-	static belongsTo = [module:Module,moduleTopic:ModuleTopic]
+	static belongsTo = [module:CourseModule,moduleTopic:ModuleTopic]
 	
 	static constraints = {
 		subModuleTopics nullable:true

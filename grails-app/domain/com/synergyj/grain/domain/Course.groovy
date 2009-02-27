@@ -19,7 +19,7 @@ class Course extends CourseContent {
 	CourseType type
 	SortedSet modules
 	
-	static hasMany = [modules:Module]
+	static hasMany = [modules:CourseModule]
 	
 	static constraints = {
 		type nullable:false
