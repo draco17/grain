@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 package com.synergyj.grain.domain
- 
-import com.synergyj.grain.auth.User
- 
+
 class CourseModule extends CourseContent implements Comparable {
 	SortedSet topics
 	static hasMany = [topics:ModuleTopic]
