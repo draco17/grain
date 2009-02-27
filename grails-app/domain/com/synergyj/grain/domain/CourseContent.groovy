@@ -15,17 +15,22 @@
  */
 package com.synergyj.grain.domain
 
-class Course extends CourseContent {
-	CourseType type
-	SortedSet modules
-	
-	static hasMany = [modules:CourseModule]
+/**
+ * Base domain class. This class defines the common properties related to Courses
+ */
+abstract class CourseContent {
+	String name
+	String description
+	Date dateCreated
+	Date lastUpdated
 	
 	static constraints = {
-		type nullable:false
+		name blank:false,nullable:false,size:1..50
+		description blank:false,nullable:false,size:1..10000
 	}
 	
-	String toString() {
-		name
+	static mapping = {
+		description type:"text"
+		tablePerHierarchy false
 	}
 }

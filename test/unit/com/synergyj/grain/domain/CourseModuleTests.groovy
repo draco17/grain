@@ -15,22 +15,15 @@
  */
 package com.synergyj.grain.domain
 
-import com.synergyj.grain.auth.User
-
-class Module implements Comparable {
-	String moduleName
-	SortedSet moduleTopics
-	Date dateCreated
-	Date lastUpdated
+class CourseModuleTests extends grails.test.GrailsUnitTestCase {
+	def existingCourse = new Course(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), type:CourseType.COURSE)
+	def existingModule = new CourseModule(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse)	
 	
-	static hasMany = [moduleTopics:ModuleTopic]
-	static belongsTo = [course:Course]
-	
-	int compareTo(Object obj){
-		moduleName.compareTo(obj.moduleName)
-	}
-	
-	String toString() {
-		moduleName
+	void testConstraints() {
+		mockForConstraintsTests CourseModule, [ existingModule ]
+		mockForConstraintsTests Course, [ existingCourse ]
+		
+		assertTrue existingModule.validate()
+		assertEquals existingModule.toString(), CourseTests.buildString(50)
 	}
 }

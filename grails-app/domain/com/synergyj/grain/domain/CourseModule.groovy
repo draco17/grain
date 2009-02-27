@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,14 +15,13 @@
  */
 package com.synergyj.grain.domain
 
-class Course extends CourseContent {
-	CourseType type
-	SortedSet modules
+class CourseModule extends CourseContent implements Comparable {
+	SortedSet topics
+	static hasMany = [topics:ModuleTopic]
+	static belongsTo = [course:Course]
 	
-	static hasMany = [modules:CourseModule]
-	
-	static constraints = {
-		type nullable:false
+	int compareTo(Object obj){
+		name.compareTo(obj.name)
 	}
 	
 	String toString() {

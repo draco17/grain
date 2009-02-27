@@ -15,12 +15,39 @@
  */
 package com.synergyj.grain.auth
 
-import grails.test.*
-
+import com.synergyj.grain.domain.CourseTests
 
 class RoleTests extends grails.test.GrailsUnitTestCase {
-
-    void testSomething() {
-
-    }
+	def existingRole = new Role(description:CourseTests.buildString(200), name:CourseTests.buildString(200))
+	
+	void testNameConstraints() {
+		mockForConstraintsTests Role, [ existingRole ]
+		
+		def role = new Role()
+		assertFalse role.validate()
+		assertEquals "nullable", role.errors["name"]
+		
+		role = new Role(name:"")
+		assertFalse role.validate()
+		assertEquals "blank", role.errors["name"]
+		
+		role = new Role(name:CourseTests.buildString(201))
+		assertFalse role.validate()
+		assertEquals "size", role.errors["name"]
+	}
+	
+	void testDescriptionConstraints() {
+		mockForConstraintsTests Role, [ existingRole ]
+		
+		def role = new Role(description:CourseTests.buildString(201))
+		assertFalse role.validate()
+		assertEquals "size", role.errors["description"]
+	}
+	
+	void testConstraints() {
+		mockForConstraintsTests Role, [ existingRole ]
+		
+		assertTrue existingRole.validate()
+		assertEquals existingRole.toString(), CourseTests.buildString(200)
+	}
 }
