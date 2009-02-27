@@ -15,22 +15,17 @@
  */
 package com.synergyj.grain.domain
 
-import com.synergyj.grain.auth.User
-
-class Module implements Comparable {
-	String moduleName
+class Module extends CourseContent implements Comparable {
 	SortedSet moduleTopics
-	Date dateCreated
-	Date lastUpdated
 	
 	static hasMany = [moduleTopics:ModuleTopic]
 	static belongsTo = [course:Course]
-	
+		
 	int compareTo(Object obj){
-		moduleName.compareTo(obj.moduleName)
+		name.compareTo(obj.name)
 	}
 	
 	String toString() {
-		moduleName
+		name
 	}
 }

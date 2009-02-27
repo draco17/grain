@@ -15,17 +15,15 @@
  */
 package com.synergyj.grain.domain
 
-class Course extends CourseContent {
-	CourseType type
-	SortedSet modules
+class ModuleTests extends grails.test.GrailsUnitTestCase {
+	def existingCourse = new Course(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), type:CourseType.COURSE)
+	def existingModule = new Module(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse)	
 	
-	static hasMany = [modules:Module]
-	
-	static constraints = {
-		type nullable:false
-	}
-	
-	String toString() {
-		name
+	void testConstraints() {
+		mockForConstraintsTests Module, [ existingModule ]
+		mockForConstraintsTests Course, [ existingCourse ]
+		
+		assertTrue existingModule.validate()
+		assertEquals existingModule.toString(), CourseTests.buildString(50)
 	}
 }
