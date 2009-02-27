@@ -20,6 +20,11 @@ class Role {
 	String name
 	Date dateCreated
 	Date lastUpdated
+	
+	static constraints = {
+		description nullable:true,blank:true,size:0..200
+		name nullable:false,blank:false,size:1..200
+	}
 
 	String toString() {
 		name
