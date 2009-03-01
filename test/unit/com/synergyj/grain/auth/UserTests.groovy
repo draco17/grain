@@ -18,7 +18,11 @@ package com.synergyj.grain.auth
 import com.synergyj.grain.domain.CourseTests
 
 class UserTests extends grails.test.GrailsUnitTestCase {
-	def existingUser = new User(email:"something@server.com", login:"user", password:"secret", realName:"User Real Name", enabled:true, about:"About the user", company:"User company", blog:"http://user.blogserver.com", geolocation:"somewhere")
+	def existingUser = new User(email:"something@server.com",
+	 login:"user", password:"secret", realName:"User Real Name", 
+	enabled:true, about:"About the user", company:"User company", 
+	blog:"http://user.blogserver.com", geolocation:"somewhere",
+	site:"http://my.com/")
 
 	void testEmailConstraints() {
 		mockForConstraintsTests(User, [ existingUser ])
@@ -156,7 +160,7 @@ class UserTests extends grails.test.GrailsUnitTestCase {
 		assertFalse user.validate()
 		assertEquals "url", user.errors["site"]
 		
-		user = new User(site:"http://"+CourseTests.buildString(50))
+		user = new User(site:"http://${CourseTests.buildString(301)}.biz/homepage.php")
 		assertFalse user.validate()
 		assertEquals "size", user.errors.site
 		
