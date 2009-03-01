@@ -41,7 +41,6 @@ class User {
 		geolocation nullable:true,blank:true,size:0..200
 		about nullable:true,blank:true,size:0..1000
 		blog nullable:true,blank:true,url:true,size:0..300
-		enabled
 		site nullable:false,blank:false,url:true,size:1..20
 	}
 
