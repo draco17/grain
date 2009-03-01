@@ -42,7 +42,7 @@ class User {
 		about(nullable:true,blank:true,size:0..1000)
 		blog(nullable:true,blank:true,url:true,size:0..300)
 		enabled()
-		site nullable:false,blank:false,url:true,size:1..50
+		site nullable:false,blank:false,url:true,size:1..20
 	}
 
 	static mapping = {
