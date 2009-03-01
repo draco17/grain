@@ -15,52 +15,52 @@
  */
 package com.synergyj.grain.domain
 
-class CourseTests extends grails.test.GrailsUnitTestCase {
+import grails.test.GrailsUnitTestCase
+
+class CourseTests extends GrailsUnitTestCase {
 	def existingCourse = new Course(name:buildString(50), description:buildString(10000), type:CourseType.COURSE)
 	
-	void testConstraintsName() {
-		mockForConstraintsTests(Course, [ existingCourse ])
+	void setUp() {
+		super.setUp()
 		
+		mockForConstraintsTests Course, [ existingCourse ]
+	}
+	
+	void testConstraintsName() {
 		def course = new Course(name:null)
 		assertFalse course.validate()
-		assertEquals "nullable", course.errors["name"]
+		assertEquals "nullable", course.errors.name
 		
 		course = new Course(name:"")
 		assertFalse course.validate()
-		assertEquals "blank", course.errors["name"]
+		assertEquals "blank", course.errors.name
 		
 		course = new Course(name:buildString(51))
 		assertFalse course.validate()
-		assertEquals "size", course.errors["name"]
+		assertEquals "size", course.errors.name
 	}
 	
 	void testConstraintsDescription() {
-		mockForConstraintsTests(Course, [ existingCourse ])
-		
 		def course = new Course(description:null)
 		assertFalse course.validate()
-		assertEquals "nullable", course.errors["description"]
+		assertEquals "nullable", course.errors.description
 		
 		course = new Course(description:"")
 		assertFalse course.validate()
-		assertEquals "blank", course.errors["description"]
+		assertEquals "blank", course.errors.description
 		
 		course = new Course(description:buildString(10001))
 		assertFalse course.validate()
-		assertEquals "size", course.errors["description"]
+		assertEquals "size", course.errors.description
 	}
 	
 	void testConstraintsType() {
-		mockForConstraintsTests(Course, [ existingCourse ])
-		
 		def course = new Course(type:null)
 		assertFalse course.validate()
-		assertEquals "nullable", course.errors["type"]
+		assertEquals "nullable", course.errors.type
 	}
 	
 	void testConstraints() {
-		mockForConstraintsTests(Course, [ existingCourse ])
-		
 		assertTrue existingCourse.validate()
 		assertEquals existingCourse.toString(), buildString(50)
 	}
