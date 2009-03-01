@@ -16,10 +16,11 @@
 package com.synergyj.grain.domain
 
 enum Status {
-	PLANNING,
+	PROPOSAL,
 	DEVELOPMENT,
-	OPEN,
+	LIVE,
 	CANCELLED,
 	DEPRECATED,
+	ARCHIVED,
 	CLOSED
 }
