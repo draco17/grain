@@ -23,7 +23,7 @@ class User {
 	String password
 	String realName
 	Boolean enabled = true
-	String about = ''
+	String about
 	String company
 	String blog
 	String geolocation
@@ -32,16 +32,16 @@ class User {
 	static hasMany = [roles:Role]
 
 	static constraints = {
-		email(nullable:false,blank:false,unique:true,email:true,size:1..200)
-		login(nullable:false,blank:false,unique:true,size:3..25)
-		password(nullable:false,blank:false,size:5..25)
-		realName(nullable:false,blank:false,size:0..200)
-		company(nullable:true,blank:true,size:0..100)
+		email nullable:false,blank:false,unique:true,email:true,size:1..200
+		login nullable:false,blank:false,unique:true,size:3..25
+		password nullable:false,blank:false,size:5..25
+		realName nullable:false,blank:false,size:0..200
+		company nullable:true,blank:true,size:0..100
 		//geolocation(nullable:true,blank:true,size:0..200,geolocation:true)
-		geolocation(nullable:true,blank:true,size:0..200)
-		about(nullable:true,blank:true,size:0..1000)
-		blog(nullable:true,blank:true,url:true,size:0..300)
-		enabled()
+		geolocation nullable:true,blank:true,size:0..200
+		about nullable:true,blank:true,size:0..1000
+		blog nullable:true,blank:true,url:true,size:0..300
+		enabled
 		site nullable:false,blank:false,url:true,size:1..20
 	}
 
