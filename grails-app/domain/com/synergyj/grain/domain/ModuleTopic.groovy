@@ -15,24 +15,21 @@
  */
 package com.synergyj.grain.domain
 
-class ModuleTopic implements Comparable {
-	String topicName
-	SortedSet subModuleTopics
-	Date dateCreated
-	Date lastUpdated
+class ModuleTopic extends CourseContent implements Comparable {
+	SortedSet topic
 	
-	static hasMany = [subModuleTopics:ModuleTopic]
-	static belongsTo = [module:CourseModule,moduleTopic:ModuleTopic]
+	static hasMany = [topics:ModuleTopic]
+	static belongsTo = [module:CourseModule,owner:ModuleTopic]
 	
 	static constraints = {
-		subModuleTopics nullable:true
+		owner nullable:true
 	}
 	
 	int compareTo(Object obj){
-		topicName.compareTo(obj.topicName)
+		name.compareTo(obj.name)
 	}
 	
 	String toString() {
-		topicName
+		name
 	}
 }
