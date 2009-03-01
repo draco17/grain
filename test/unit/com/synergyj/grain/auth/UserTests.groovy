@@ -140,6 +140,28 @@ class UserTests extends grails.test.GrailsUnitTestCase {
 		assertEquals "size", user.errors["blog"]
 	}
 	
+	
+	void testSiteConstraints() {
+		mockForConstraintsTests(User, [ existingUser ])
+		
+		def user = new User()
+		assertFalse user.validate()
+		assertEquals "nullable", user.errors["site"]
+		
+		user = new User(site:"")
+		assertFalse user.validate()
+		assertEquals "blank", user.errors["site"]
+		
+		user = new User(site:"fghjfghjf")
+		assertFalse user.validate()
+		assertEquals "url", user.errors["site"]
+		
+		user = new User(site:"http://"+CourseTests.buildString(50))
+		assertFalse user.validate()
+		assertEquals "size", user.errors.site
+		
+	}
+	
 	void testConstraints() {
 		mockForConstraintsTests(User, [ existingUser ])
 		
