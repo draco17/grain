@@ -1,0 +1,343 @@
+form {
+	/*background-color:#ecefcb;*/
+	background-color:#FFFFFF;
+	padding: 10px;
+	line-height: 200%;
+}
+
+/* Form Sections ======================================================================== */
+
+/* Fieldset  */
+fieldset {
+	position:relative;
+	margin: 1em 0px 20px 20px;
+	padding: 2em 10px 10px 10px;
+	background-color:#e9f9ac;
+	border-width:2px 2px 2px 10px;
+	border-style:solid;
+	border-color:#cee574;
+	overflow: auto;
+	font-family:Arial, Helvetica, sans-serif ;
+	font-size:small;
+}
+legend {
+	line-height: 100%;
+	position:absolute;
+	padding: 3px 5px;
+	top: -10px;	
+	background-color:#ecefcb;
+	border-width:1px 1px 1px 10px;
+	border-color:#ff9900;
+	border-style:solid;	
+	color:#5c71a2;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:90%;
+	text-align:center;
+} 	 
+/* Nested Fieldset  */
+fieldset fieldset  {
+}
+fieldset fieldset legend {
+}
+/* Inline Section */
+.inlineSection {
+	overflow: auto;
+	width: 100%;	
+}
+/* Grid Section */
+form table {
+	border-collapse: collapse;
+}
+form td {
+	padding: 0 4px;
+	border-left: 1px solid #DFDED2;
+	border-right: 1px solid #DFDED2;	
+	line-height: normal;	
+}
+form th {
+	padding: 0 4px;
+}
+form .alternate-1 {
+	background-color:#ecefcb;
+}
+form .alternate-1 td {
+	border-left: 1px solid #DFDED2;
+	border-right: 1px solid #DFDED2;	
+}
+form .alternate-0 {
+}
+/* Combo Label + Input Field =========================================================== */
+form div.optional label, label.optional {
+  	margin: 0px 0;
+	display: block;
+	vertical-align: middle;
+}
+
+form div.required label, label.required {
+  	margin: 0px 0;
+	display: block;
+	vertical-align: middle;
+}
+
+form .oneField {
+	margin: 0px 0;
+	display: block;
+	vertical-align: middle;
+}
+form .inlineSection .oneField {
+	margin-right: 2px;
+	white-space: nowrap;	
+	display: inline;
+}
+/* Ties together a label and its checkbox or radio */
+form .oneChoice {
+	white-space: nowrap; 	
+}
+
+/* Field Labels ======================================================================== */
+
+/* Base */
+label, form .label {	
+	margin:0 5px 0 0;
+	color:#5c71a2;
+	line-height: normal;
+	
+	font-size:90%;
+	font-weight:bold;
+	display: -moz-inline-box;
+	display: inline-block;	
+	min-width:100px;
+	text-align:right;
+	white-space: nowrap;
+}
+/* Text inputs / Select label */
+label.preField {
+	font-size:90%;
+	font-weight:bold;
+	display: -moz-inline-box;
+	display: inline-block;	
+	min-width:100px;
+	text-align:right;
+	white-space: nowrap;
+}
+/* Radio / Checkbox group label */
+form .label  {
+	display: block; 
+	margin: 0.6em 4px 0 0;
+	padding: 2px;
+}
+/* Individual Checkbox / Radio label */
+label.postField  {
+	padding: 0 4px;
+	font-size:90%;
+	color:#5c71a2;
+}
+/* Label when inside an inline section */
+form .inlineSection .oneField .inlineLabel {
+	display: -moz-inline-box;
+	display: inline-block;	
+	font-size:90%;
+	font-weight:bold;
+	text-align:right;
+	min-width:100px;
+}
+
+/* Inputs ======================================================================== */
+
+textarea {
+	background-color:#e9f9ac;
+	margin:2px 5px 0 0;
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color:#809431;
+	color:#5c71a2;
+	font-family:"Courier New", Courier, mono;
+	font-size: 12px;
+	padding:1px 2px;
+}
+input {
+	background-color:#e9f9ac;
+	margin:2px 5px 0 0;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid solid dotted solid;
+	border-color:#809431;
+	color:#5c71a2;
+	font-family:"Courier New", Courier, mono;
+	padding:1px 2px;
+}
+input[type='text'] {		
+}
+input[type='checkbox'] {		
+	margin-right: 5px;
+}
+input[type='submit'] {		
+	background-color:#ff9900;
+	border:1px solid #ff9900;
+	color:#000000;
+	font-weight:bolder;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+select {
+	margin: 2px 2px 1px 0;
+	padding: 0;
+}
+.inlineSection .oneField select {
+	margin: 0 2px 1px 0 !important;
+}
+.gridSection select  {
+	margin: 0 !important;
+}
+.gridSection input[type='checkbox'] {
+	margin: 0 !important;
+}
+form .alternate-1 input {
+	background-color:#ecefcb;
+}
+
+/* Buttons ======================================================================= */
+
+form .actions {
+	padding-top: 15px;
+	text-align: right;
+	clear: right;
+}
+/* Submit button */
+form .primaryAction {
+	background-color:#e9f9ac;
+	border:1px solid #809431;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:2px;
+	margin:0px 0px 0px 20px
+}
+form .primaryAction:hover {
+	background-color:#E9FDD7;
+}
+/* Cancel button */
+form .secondaryAction {
+	color: grey;
+	background-color:#e9f9ac;
+	border:1px solid #809431;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:2px;
+	margin:0px 0px 0px 20px	
+}
+form .secondaryAction:hover {
+	color: black;
+}
+
+/* Form Builder Related Rules ===================================================== */
+
+/* Form or Fieldset instruction paragraph. */
+form .instructions {
+	/*margin: 1.5em 0;*/
+	margin: 10px 0;
+	padding: 0px 0px 0px 0px;
+	line-height: 130%;
+}
+/* Asterisk on required fields */
+form .reqMark {
+	color: #F00;
+	padding: 0 4px;
+}
+/* wForms Related Rules ========================================================== */
+
+/* Field w/ a validation error */
+form .errFld {
+	padding: 1px;
+	border: 1px solid #F00;
+}
+/* Styling for message associated with a validation error. */
+form .errMsg {	
+	color: #CC3333 !important;
+	display: block;
+}
+/* Field-Hint with focus */
+form .field-hint {
+	position: absolute;
+	width: 180px;
+	z-index: 50;
+	background-image: url(/images/v2/hint_topborder.gif);
+	background-repeat: no-repeat;
+	background-position: left top;	
+	padding: 14px 0 0 0;
+	margin:  2px 0 0 10px;
+	color: #000;
+}
+form .field-hint div {
+	background-color: #fffbb8;
+	border-left: 1px solid #ffc20d;
+	border-right: 1px solid #ffc20d;
+	border-bottom: 1px solid #ffc20d;
+	padding: 4px;
+	line-height: normal;
+}
+/* Field-Hint without focus */
+form .field-hint-inactive {
+	visibility: hidden;
+	position: absolute;
+}
+/* Repeat Behavior divs (when not set on a fieldset) */
+div.repeat {
+	margin: 3px 0;
+	padding-right: 6px;
+	border: 1px dotted #ddd;
+	background-color: #FFFFFF;
+}
+div.removeable {
+	margin: 3px 0;
+	padding-right: 6px;	
+	border: 1px dotted #ccc;
+	background-color: #F3F3F3;
+	
+}
+/* Links generated by the Repeat Behavior */
+form .duplicateLink {
+	line-height: 260%;
+	font-weight: bold;
+}
+form .removeLink {
+	line-height: 260%;
+}
+form td .duplicateLink, form td .removeLink  {
+	margin: 0;
+	line-height: 100%;
+}
+/* Switch Behavior Classes */
+.onstate-a,  .onstate-b,  .onstate-c,  .onstate-d,
+.onstate-e,  .onstate-f,  .onstate-g,  .onstate-h, 
+.onstate-i,  .onstate-j,  .onstate-k,  .onstate-l, 
+.onstate-m,  .onstate-n,  .onstate-o,  .onstate-p, 
+.onstate-q,  .onstate-r,  .onstate-s,  .onstate-t,
+.onstate-u,  .onstate-v,  .onstate-w,  .onstate-x,  
+.onstate-y,  .onstate-z,  .onstate-aa, .onstate-ab,
+.onstate-ac, .onstate-ad, .onstate-ae, .onstate-af,
+.onstate-ag, .onstate-ah, .onstate-ai, .onstate-aj,
+.onstate-ak, .onstate-al, .onstate-am, .onstate-an,
+.onstate-ao, .onstate-ap, .onstate-aq, .onstate-ar,
+.onstate-as, .onstate-at, .onstate-au, .onstate-av,
+.onstate-aw, .onstate-ax, .onstate-ay, .onstate-az {
+	display: block;
+}
+/* offstate classes for the Switch Behavior are in wforms-jsonly.css */
+
+
+ 
+/* IE6 BUG FIXES ==================================================================== */
+form {
+	height:expression('1%'); /* IE Pick-a-boo bug fix */
+}
+form fieldset {
+	overflow: expression('visible');
+}
+
+form .inlineSection .oneField {
+	display: expression('inline-block');		
+}
+label.preField, form .inlineSection .oneField .inlineLabel {
+	width: expression('7em');
+	white-space: expression('nowrap');
+}
