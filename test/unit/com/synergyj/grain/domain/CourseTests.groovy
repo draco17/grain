@@ -20,7 +20,7 @@ import grails.test.GrailsUnitTestCase
 class CourseTests extends GrailsUnitTestCase {
 	def existingCourse = new Course(name:buildString(50), description:buildString(10000), type:CourseType.COURSE, status:Status.PROPOSAL)
 	
-	void setUp() {
+	protected void setUp() {
 		super.setUp()
 		
 		mockForConstraintsTests Course, [ existingCourse ]
