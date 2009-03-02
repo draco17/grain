@@ -17,7 +17,9 @@ package com.synergyj.grain.domain
 
 import com.synergyj.grain.auth.User
 
-class Registration{
+class Registration {
+	Date dateCreated
+	Date lastUpdated
 	User student
 	ScheduledCourse scheduledCourse
 	Date registrationDate
