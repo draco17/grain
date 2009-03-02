@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>Grain - [<g:layoutTitle default="" />]</title>
 	<link rel="stylesheet" href="${createLinkTo(dir:'themes/synergyj',file:'style.css')}" />
+	<link rel="stylesheet" href="${createLinkTo(dir:'themes/synergyj',file:'form.css')}" />
 	<link rel="stylesheet" href="${createLinkTo(dir:'themes/synergyj',file:'ui.all.css')}" />
 	<link rel="shortcut icon" href="${createLinkTo(dir:'themes/synergyj',file:'favicon.ico')}" type="image/x-icon" />
 	
