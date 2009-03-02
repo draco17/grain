@@ -15,30 +15,6 @@
  */
 package com.synergyj.grain.domain
 
-class ModuleTopic extends CourseContent implements Comparable<ModuleTopic> {
-	CourseModule module
-	ModuleTopic parent
-	Integer order = 100
-	SortedSet topics
-	
-	static hasMany = [topics:ModuleTopic]
-	static belongsTo = [module:CourseModule,parent:ModuleTopic]
-	
-	static constraints = {
-		module nullable:false
-		parent nullable:true
-		order nullable:false
-	}
-	
-	static mapping = {
-		order column:"topic_order"
-	}
-	
-	int compareTo(ModuleTopic other){
-		order - other.order
-	}
-	
-	String toString() {
-		name
-	}
+class CourseModuleController {
+	def scaffold = true
 }

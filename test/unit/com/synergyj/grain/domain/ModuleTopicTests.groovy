@@ -15,44 +15,28 @@
  */
 package com.synergyj.grain.domain
 
-class CourseModuleTests extends grails.test.GrailsUnitTestCase {
+import grails.test.*
+
+class ModuleTopicTests extends GrailsUnitTestCase {
 	def existingCourse = new Course(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), type:CourseType.COURSE)
-	def existingModule = new CourseModule(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse, order:1)
+	def existingModule = new CourseModule(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), course:existingCourse)
+	def existingModuleTopic = new ModuleTopic(name:CourseTests.buildString(50), description:CourseTests.buildString(10000), module:existingModule)
 	
 	protected void setUp() {
 		super.setUp()
-		
 		mockForConstraintsTests CourseModule, [ existingModule ]
 		mockForConstraintsTests Course, [ existingCourse ]
+		mockForConstraintsTests ModuleTopic, [ existingModuleTopic ]
 	}
 	
-	void testConstraintsCourse() {
-		def module = new CourseModule()
-		assertFalse module.validate()
-		assertEquals "nullable", module.errors.course
-	}
-	
-	void testConstraintsOrder() {
-		def module = new CourseModule()
-		assertFalse module.validate()
-		assertEquals "nullable", module.errors.order
-	}
-	
-	void testModuleOrder() {
-		def module1 = new CourseModule(order:1)
-		def module2 = new CourseModule(order:2)
-		
-		assertTrue(module1 < module2)
-		
-		module1.order = 5
-		assertTrue(module1 > module2)
-		
-		module2.order = 5
-		assertTrue(module1 == module2)
+	void testConstraintsModule() {
+		def moduleTopic = new ModuleTopic(module:null)
+		assertFalse moduleTopic.validate()
+		assertEquals "nullable", moduleTopic.errors.module
 	}
 	
 	void testConstraints() {
-		assertTrue existingModule.validate()
-		assertEquals existingModule.toString(), CourseTests.buildString(50)
+		assertTrue existingModuleTopic.validate()
+		assertEquals existingModuleTopic.toString(), CourseTests.buildString(50)
 	}
 }

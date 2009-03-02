@@ -15,13 +15,25 @@
  */
 package com.synergyj.grain.domain
 
-class CourseModule extends CourseContent implements Comparable {
+class CourseModule extends CourseContent implements Comparable<CourseModule> {
+	Course course
+	Integer order = 100
 	SortedSet topics
+	
 	static hasMany = [topics:ModuleTopic]
 	static belongsTo = [course:Course]
 	
-	int compareTo(Object obj){
-		name.compareTo(obj.name)
+	static mapping = {
+		order column:"module_order"
+	}
+	
+	static constraints = {
+		course nullable:false
+		order nullable:false
+	}
+	
+	int compareTo(CourseModule other){
+		order - other.order
 	}
 	
 	String toString() {
