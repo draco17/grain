@@ -1,5 +1,5 @@
 
-<%@ page import="com.grainapp.auth.User" %>
+<%@ page import="com.synergyj.grain.auth.User" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
