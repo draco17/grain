@@ -27,12 +27,12 @@
                         
                    	        <g:sortableColumn property="description" title="Description" />
                         
+                   	        <g:sortableColumn property="lastUpdated" title="Last Updated" />
+                        
+                   	        <g:sortableColumn property="dateCreated" title="Date Created" />
+                        
                    	        <th>Module</th>
                    	    
-                   	        <th>Parent</th>
-                   	    
-                   	        <g:sortableColumn property="order" title="Order" />
-                        
                         </tr>
                     </thead>
                     <tbody>
@@ -45,11 +45,11 @@
                         
                             <td>${fieldValue(bean:moduleTopicInstance, field:'description')}</td>
                         
+                            <td>${fieldValue(bean:moduleTopicInstance, field:'lastUpdated')}</td>
+                        
+                            <td>${fieldValue(bean:moduleTopicInstance, field:'dateCreated')}</td>
+                        
                             <td>${fieldValue(bean:moduleTopicInstance, field:'module')}</td>
-                        
-                            <td>${fieldValue(bean:moduleTopicInstance, field:'parent')}</td>
-                        
-                            <td>${fieldValue(bean:moduleTopicInstance, field:'order')}</td>
                         
                         </tr>
                     </g:each>

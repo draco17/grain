@@ -67,24 +67,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateCreated">Date Created:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'dateCreated','errors')}">
-                                    <g:datePicker name="dateCreated" value="${courseInstance?.dateCreated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${courseInstance?.lastUpdated}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="modules">Modules:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:courseInstance,field:'modules','errors')}">

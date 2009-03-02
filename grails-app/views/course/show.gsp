@@ -44,16 +44,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Type:</td>
+                            <td valign="top" class="name">Last Updated:</td>
                             
-                            <td valign="top" class="value">${courseInstance?.type?.encodeAsHTML()}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Status:</td>
-                            
-                            <td valign="top" class="value">${courseInstance?.status?.encodeAsHTML()}</td>
+                            <td valign="top" class="value">${fieldValue(bean:courseInstance, field:'lastUpdated')}</td>
                             
                         </tr>
                     
@@ -65,9 +58,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Last Updated:</td>
+                            <td valign="top" class="name">Type:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:courseInstance, field:'lastUpdated')}</td>
+                            <td valign="top" class="value">${courseInstance?.type?.encodeAsHTML()}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Status:</td>
+                            
+                            <td valign="top" class="value">${courseInstance?.status?.encodeAsHTML()}</td>
                             
                         </tr>
                     

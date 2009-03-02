@@ -17,7 +17,7 @@ package com.synergyj.grain.domain
 
 class CourseModule extends CourseContent implements Comparable<CourseModule> {
 	Course course
-	Integer order = 100
+	Integer order
 	SortedSet topics
 	
 	static hasMany = [topics:ModuleTopic]

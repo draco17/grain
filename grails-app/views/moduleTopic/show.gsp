@@ -44,6 +44,20 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name">Last Updated:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:moduleTopicInstance, field:'lastUpdated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name">Date Created:</td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean:moduleTopicInstance, field:'dateCreated')}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name">Module:</td>
                             
                             <td valign="top" class="value"><g:link controller="courseModule" action="show" id="${moduleTopicInstance?.module?.id}">${moduleTopicInstance?.module?.encodeAsHTML()}</g:link></td>
@@ -61,20 +75,6 @@
                             <td valign="top" class="name">Order:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:moduleTopicInstance, field:'order')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Date Created:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:moduleTopicInstance, field:'dateCreated')}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name">Last Updated:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:moduleTopicInstance, field:'lastUpdated')}</td>
                             
                         </tr>
                     

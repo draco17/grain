@@ -27,6 +27,9 @@ abstract class CourseContent {
 	static constraints = {
 		name blank:false,nullable:false,size:1..50
 		description blank:false,nullable:false,size:1..10000
+		
+		lastUpdated display:false
+		dateCreated display:false
 	}
 	
 	static mapping = {
