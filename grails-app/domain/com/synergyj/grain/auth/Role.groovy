@@ -24,6 +24,8 @@ class Role {
 	static constraints = {
 		description nullable:true,blank:true,size:0..200
 		name nullable:false,blank:false,size:1..200
+		lastUpdated display:false
+		dateCreated display:false
 	}
 
 	String toString() {

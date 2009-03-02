@@ -27,5 +27,10 @@ class ScheduledCourse{
 	Date dateCreated
 	Date lastUpdated
 	
+	static constraints = {
+		lastUpdated display:false
+		dateCreated display:false
+	}
+	
 	static hasMany = [courseSessions:CourseSession]
 }

@@ -26,6 +26,11 @@ class CourseSession{
 	static hasMany = [teachers:User]
 	static belongsTo = [scheduledCourse:ScheduledCourse]
 	
+	static constraints = {
+		lastUpdated display:false
+		dateCreated display:false
+	}
+	
 	String toString(){
 		sessionDate.toString()
 	}

@@ -23,5 +23,10 @@ class Registration{
 	Date registrationDate
 	Boolean completeCourse
 	
+	static constraints = {
+		lastUpdated display:false
+		dateCreated display:false
+	}
+	
 	static hasMany = [courseSessions:CourseSession]
 }

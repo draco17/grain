@@ -42,6 +42,8 @@ class User {
 		about nullable:true,blank:true,size:0..1000
 		blog nullable:true,blank:true,url:true,size:0..300
 		site nullable:false,blank:false,url:true,size:1..20
+		lastUpdated display:false
+		dateCreated display:false
 	}
 
 	static mapping = {
