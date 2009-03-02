@@ -27,7 +27,7 @@ label
     margin:5px 0px;
 }
 
-
+/******** Comment this code because @neodevelop added a css with other fomr's style ****************
 form {
 	background:url(images/formBgr.gif) 0 0 repeat-x;
 	background-color:black;
@@ -167,19 +167,7 @@ form div img {
   border: 1px solid #000000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+******** Comment this code because @neodevelop added a css with other fomr's style ****************/
 
 ul{
 	margin:0; 
